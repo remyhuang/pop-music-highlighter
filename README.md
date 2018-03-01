@@ -36,7 +36,7 @@ You can change the I/O settings by editing the `model.py` for your own purpose.
 * The highlight length you set is shorter than the original length of audio.
 
 ## License
-[GNU General Public License v3.0](https://github.com/remyhuang/pop-music-highlighter/blob/master/LICENSE)
+The source code is licensed under [GNU General Public License v3.0](https://github.com/remyhuang/pop-music-highlighter/blob/master/LICENSE). However, the pre-trained model (those files under the folder 'model') is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Academia Sinica (Taipei, Taiwan) reserves all the copyrights for the pre-trained model.
 
 ## Contact
 Please feel free to contact [Yu-Siang Huang](https://remyhuang.github.io/) if you have any questions.
