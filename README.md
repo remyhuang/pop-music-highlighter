@@ -35,5 +35,8 @@ You can change the I/O settings by editing the `model.py` for your own purpose.
 * No audio input in the `input` folder.
 * The highlight length you set is shorter than the original length of audio.
 
+## License
+[GNU General Public License v3.0](https://github.com/remyhuang/pop-music-highlighter/blob/master/LICENSE)
+
 ## Contact
 Please feel free to contact [Yu-Siang Huang](https://remyhuang.github.io/) if you have any questions.
