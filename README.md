@@ -7,7 +7,7 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
 
     @article{huang2018highlighter,
       title={Pop music highlighter: Marking the emotion keypoints},
-      author={Huang, Yu-Siang, Chou, Szu-Yu and Yang, Yi-Hsuan},
+      author={Huang, Yu-Siang and Chou, Szu-Yu and Yang, Yi-Hsuan},
       journal={arXiv preprint arXiv:1802.10495},
       year={2018}
     }
