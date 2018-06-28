@@ -15,7 +15,7 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
 ## Environment
 * Python 2.7
 * TensorFlow 1.2.0
-* NumPy 1.11.0
+* NumPy 1.13.0
 * LibROSA 0.5.1
 
 Note: you need to put your own audio(`.mp3 format`) in the `input` folder before you run the code.
