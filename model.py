@@ -2,6 +2,7 @@ from __future__ import division, print_function
 import tensorflow as tf
 import numpy as np
 import glob
+import os
 from lib import *
 
 class MusicHighlighter(object):
@@ -69,6 +70,20 @@ class MusicHighlighter(object):
 
     def extract(self, length=30, save_score=True, save_thumbnail=True, save_wav=True):
         fs = sorted(glob.glob('./input/*.mp3'))
+
+        # check output folder
+        if not os.path.isdir('./output'):
+            os.mkdir('./output')
+            os.mkdir('./output/score')
+            os.mkdir('./output/highlight')
+            os.mkdir('./output/audio')
+        else:
+            if not os.path.isdir('./output/score'):
+                os.mkdir('./output/score')
+            if not os.path.isdir('./output/highlight'):
+                os.mkdir('./output/highlight')
+            if not os.path.isdir('./output/audio'):
+                os.mkdir('./output/audio')
         
         attn_score = self.build_model()
         config = tf.ConfigProto()
@@ -105,7 +120,7 @@ class MusicHighlighter(object):
                 highlight = [index, index + length]
 
                 if save_thumbnail:
-                    np.save('./output/highlighter/{}.npy'.format(name), thumbnail)
+                    np.save('./output/highlight/{}.npy'.format(name), highlight)
 
                 if save_wav:
                     librosa.output.write_wav('./output/audio/{}.wav'.format(name), audio[highlight[0]*22050:highlight[1]*22050], 22050)
