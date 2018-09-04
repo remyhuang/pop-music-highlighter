@@ -8,7 +8,7 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
     @article{huang2018highlighter,
       title={Pop music highlighter: Marking the emotion keypoints},
       author={Huang, Yu-Siang and Chou, Szu-Yu and Yang, Yi-Hsuan},
-      journal={Transactions of the International Society for Music Information Retrieval (TISMIR), accepted for publication},
+      journal={Transactions of the International Society for Music Information Retrieval},
       year={2018},
       volume={1},
       number={1},
