@@ -1,5 +1,5 @@
 # Pop Music Highlighter
-TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoints](https://arxiv.org/abs/1802.10495)
+TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoints](https://transactions.ismir.net/articles/10.5334/tismir.14/)
 * An attention-based music highlight extraction model to capture the emotion attention score
 * Model: Non-recurrent Neural Attention Modeling by Late Fusion with positional embeddings (NAM-LF (pos))
 
@@ -9,7 +9,10 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
       title={Pop music highlighter: Marking the emotion keypoints},
       author={Huang, Yu-Siang and Chou, Szu-Yu and Yang, Yi-Hsuan},
       journal={Transactions of the International Society for Music Information Retrieval (TISMIR), accepted for publication},
-      year={2018}
+      year={2018},
+      volume={1},
+      number={1},
+      pages={68-78},
     }
 
 ## Environment
