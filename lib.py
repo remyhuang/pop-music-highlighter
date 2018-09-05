@@ -20,12 +20,12 @@ def audio_read(f):
     return y, S, int(d)
 
 def positional_encoding(batch_size, n_pos, d_pos):
-        # keep dim 0 for padding token position encoding zero vector
-        position_enc = np.array([
-            [pos / np.power(10000, 2 * (j // 2) / d_pos) for j in range(d_pos)]
-            if pos != 0 else np.zeros(d_pos) for pos in range(n_pos)])
+    # keep dim 0 for padding token position encoding zero vector
+    position_enc = np.array([
+        [pos / np.power(10000, 2 * (j // 2) / d_pos) for j in range(d_pos)]
+        if pos != 0 else np.zeros(d_pos) for pos in range(n_pos)])
 
-        position_enc[1:, 0::2] = np.sin(position_enc[1:, 0::2]) # dim 2i
-        position_enc[1:, 1::2] = np.cos(position_enc[1:, 1::2]) # dim 2i+1
-        position_enc = np.tile(position_enc, [batch_size, 1, 1])
-        return position_enc
+    position_enc[1:, 0::2] = np.sin(position_enc[1:, 0::2]) # dim 2i
+    position_enc[1:, 1::2] = np.cos(position_enc[1:, 1::2]) # dim 2i+1
+    position_enc = np.tile(position_enc, [batch_size, 1, 1])
+    return position_enc
