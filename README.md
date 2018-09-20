@@ -25,7 +25,7 @@ Note: you need to put your own audio(`.mp3 format`) in the `input` folder before
 
 	$ git clone https://github.com/remyhuang/pop-music-highlighter.git 	
 	$ cd pop-music-highlighter
-    	$ python main.py
+	$ python main.py
 
 ## Outputs
 In the `main.py`, you can set the __extracted highlight length__ and whether save the outputs of audio, score and highlight.
