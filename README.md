@@ -12,7 +12,7 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
       year={2018},
       volume={1},
       number={1},
-      pages={68-78},
+      pages={68-78}
     }
 
 ## Environment
@@ -24,7 +24,8 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
 Note: you need to put your own audio(`.mp3 format`) in the `input` folder before you run the code.
 
 	$ git clone https://github.com/remyhuang/pop-music-highlighter.git 	
-    $ python main.py
+	$ cd pop-music-highlighter
+    	$ python main.py
 
 ## Outputs
 In the `main.py`, you can set the __extracted highlight length__ and whether save the outputs of audio, score and highlight.
