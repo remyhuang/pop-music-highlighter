@@ -12,31 +12,28 @@ TensorFlow implementation of [Pop Music Highlighter: Marking the Emotion Keypoin
       year={2018},
       volume={1},
       number={1},
-      pages={68-78}
+      pages={68--78}
     }
 
 ## Environment
-* Python 2.7
+* Python 3.6
 * TensorFlow 1.2.0
 * NumPy 1.13.0
 * LibROSA 0.5.1
 
-Note: you need to put your own audio(`.mp3 format`) in the `input` folder before you run the code.
+Note: you need to rewrite the `main.py` for your own purpose and the input audio format to be (`mp3 format`).
 
 	$ git clone https://github.com/remyhuang/pop-music-highlighter.git 	
 	$ cd pop-music-highlighter
 	$ python main.py
 
 ## Outputs
-In the `main.py`, you can set the __extracted highlight length__ and whether save the outputs of audio, score and highlight.
+Three default output files
 * __audio__: short clip of highlight from the original song (.wav format)
 * __score__: emotion attention score of every second (.npy format)
 * __highlight__: time interval of highlight (.npy format)
 
-You can change the I/O settings by editing the `model.py` for your own purpose.
-
-## Possible Errors
-* No audio input in the `input` folder.
+## Possible Error
 * The highlight length you set is shorter than the original length of audio.
 
 ## License
