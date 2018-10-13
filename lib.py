@@ -3,10 +3,10 @@ import librosa
 
 def chunk(incoming, n_chunk):
     input_length = incoming.shape[1]
-    chunk_length = input_length / n_chunk
+    chunk_length = input_length // n_chunk
     outputs = []
-    for i in xrange(incoming.shape[0]):
-        for j in xrange(n_chunk):
+    for i in range(incoming.shape[0]):
+        for j in range(n_chunk):
             outputs.append(incoming[i, j*chunk_length:(j+1)*chunk_length, :])
     outputs = np.array(outputs)
     return outputs
