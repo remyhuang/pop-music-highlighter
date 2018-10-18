@@ -17,6 +17,11 @@ def extract(fs, length=30, save_score=True, save_thumbnail=True, save_wav=True):
             n_chunk, remainder = np.divmod(duration, 3)
             chunk_spec = chunk(spectrogram, n_chunk)
             pos = positional_encoding(batch_size=1, n_pos=n_chunk, d_pos=model.dim_feature*4)
+            
+            n_chunk = n_chunk.astype('int')
+            chunk_spec = chunk_spec.astype('float')
+            pos = pos.astype('float')
+            
             attn_score = model.calculate(sess=sess, x=chunk_spec, pos_enc=pos, num_chunk=n_chunk)
             attn_score = np.repeat(attn_score, 3)
             attn_score = np.append(attn_score, np.zeros(remainder))
