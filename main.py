@@ -12,7 +12,7 @@ def extract(fs, length=30, save_score=True, save_thumbnail=True, save_wav=True):
         model.saver.restore(sess, 'model/model')
 
         for f in fs:
-            name = f.split('/')[-1][:-4]
+            name = os.path.split(f)[-1][:-4]
             audio, spectrogram, duration = audio_read(f)
             n_chunk, remainder = np.divmod(duration, 3)
             chunk_spec = chunk(spectrogram, n_chunk)
